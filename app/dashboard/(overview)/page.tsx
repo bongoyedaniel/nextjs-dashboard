@@ -5,14 +5,17 @@ import { lusitana } from '@/app/ui/fonts';
 import { fetchCardData } from '@/app/lib/data';
 import { Suspense } from 'react';
 import CardWrapper from '@/app/ui/dashboard/cards';
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Dashboard | Acme Dashboard',
+};
 
 import {
   CardsSkeleton,
   LatestInvoicesSkeleton,
   RevenueChartSkeleton
 } from '@/app/ui/skeletons';
-
-
 
 export default async function Page() {
   //const latestInvoices = await fetchLatestInvoices();
